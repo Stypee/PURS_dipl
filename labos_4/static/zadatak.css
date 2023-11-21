@@ -1,0 +1,38 @@
+.prvi {
+    margin: 30px 5px 0px 5px;
+    background-color: lightblue;
+    border: 1px solid grey;
+    border-radius: 5px 5px 0px 0px;
+    width: 300px;
+}
+
+.drugi {
+    margin: 0px 5px 0px 5px;
+    background-color: white;
+    border: 1px solid grey;
+    width: 300px;
+}
+
+.treci {
+    margin: 0px 5px 0px 5px;
+    background-color: white;
+    border: 1px solid grey;
+    width: 300px;
+}
+
+.cetvrti {
+    margin: 0px 5px 0px 5px;
+    background-color: white;
+    border: 1px solid grey;
+    width: 300px;
+}
+
+a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
