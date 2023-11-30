@@ -45,7 +45,34 @@ a {
 }
 
 main {
+    justify-content: center;
+    display: flex;
+}
+
+table {
+    justify-content: center;
     border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+thead {
+    text-align: center;
+    background-color: #3A454D;
+    text-decoration: none;
+    color: white;
+}
+
+tbody {
+    background-color: #DDDDDD;
     text-align: center;
 }
 
+tr:nth-child(even){
+    background-color: #3A454D;
+}

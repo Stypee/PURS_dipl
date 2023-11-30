@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
 </head>
 <body>
     <div class="glavni">
         <header>
             <div class="livi-dio">
-                <p>Username</p>
-                <img src="/static/user-icon.png" width="70px">
+                <p>{{naziv|capitalize}}</p>
+                <img src="{{ url_for('static', filename='user-icon.png') }}" width="70px"/>
             </div>
-            <img class="slika" src="static/icon.png" width="70px">
+            <img class="slika" src="{{ url_for('static', filename='icon.png') }}" width="70px"/>
         </header>
         <nav>
-            <a href="Logout">Logout</a>
-            <a href="Temperatura">Temperatura</a>
-            <a href="Vlaga">Vlaga</a>
+            <a href="{{ url_for('logout_page')}}">Logout</a>
+            <a href="?id=1">Temperatura</a>
+            <a href="?id=2">Vlaga</a>
         </nav>
+        <main> 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vrijeme</th>
+                        <th>{{tip}}</th>
+                        <th>Brisanje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for d in data %}
+                    <tr>
+                        <td>{{d.datum}}</td>
+                        <td>{{d.vrijednost}}</td>
+                        <td><button>Obrisi</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
     </div>
 
 </body>

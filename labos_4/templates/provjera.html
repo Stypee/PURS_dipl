@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='icon.png') }}" width="70px"/>
+    {%if testif %}
+    <p class="poruka">
+        {{testif}}
+    </p>
+    {%endif%}
+    <main>
+        <table>
+            {% for tekst in tekstovi %}
+            <tr>
+                <td>{{tekst.tekst}}</td>
+            </tr>
+            {% endfor %} 
+        </table>
+    </main>
+</body>
+</html>

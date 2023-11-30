@@ -1,0 +1,39 @@
+body {
+    background-image: url(background_login.avif);
+    height: 100%;
+}
+
+.parent {
+    height: 500px;
+    margin-top: 100px;
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.child {
+    background-color: aqua;
+    box-shadow: 10px;
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+input, label {
+    padding: 5px;
+}
+
+.title {
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}
+
+.poruka {
+    color: red;
+    font-size: x-large;
+}
